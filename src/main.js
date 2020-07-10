@@ -15,10 +15,15 @@
   tagsContainer.appendChild(autoTagButton);
 
   function createAutoTagButton() {
+    const btnDiv = document.createElement('div');
+    btnDiv.className = 'grid gsx gs4 ai-center mt8';
+
     const btn = document.createElement('button');
     btn.innerText = 'Auto tag';
     btn.addEventListener('click', handleAutoTagClick);
-    return btn;
+    btnDiv.appendChild(btn);
+
+    return btnDiv;
   }
 
   function handleAutoTagClick(ev) {
