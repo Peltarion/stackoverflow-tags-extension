@@ -24,7 +24,7 @@
 
     const body = {
       rows: [
-        [ { [inputParam]: `${title}\n${content}` } ]
+        { [inputParam]: `${title}\n${content}` }
       ]
     };
 
@@ -37,11 +37,23 @@
       body: JSON.stringify(body)
     }).then(resp => resp.ok ? resp : new Error('opps!'))
       .then(resp => resp.json())
-      .then(json => console.log(json));
+      .then(json => {
 
-    tagEditorInputElem.focus();
-    tagEditorInputElem.value = 'javascript golang java';
-    tagEditorElem.click();
+        const tags = json?.rows[0]?.tag;
+        const [maxTag, maxAcc] = Object.entries(tags).reduce((max, [k, v]) => {
+          if (max[1] < v) {
+            return [k, v];
+          }
+          return max;
+        }, ['', 0]);
+
+        if (maxTag) {
+          console.log('maxTag: ', maxTag, maxAcc);
+          tagEditorInputElem.focus();
+          tagEditorInputElem.value = maxTag;
+          tagEditorElem.click();
+        }
+      });
 
   })
 
