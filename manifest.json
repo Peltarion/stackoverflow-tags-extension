@@ -1,0 +1,19 @@
+{
+  "name": "Stackoverflow tags",
+  "version": "1.0",
+  "description": "Auto tag your Stack Overflow posts",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["src/extension/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/questions/ask"],
+      "run_at": "document_idle",
+      "css": ["src/style.css"],
+      "js": ["src/main.js"]
+    }
+  ],
+  "web_accessible_resources": []
+}
