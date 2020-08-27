@@ -12,8 +12,11 @@
       "matches": ["https://stackoverflow.com/questions/ask"],
       "run_at": "document_idle",
       "css": ["src/style.css"],
-      "js": ["src/main.js"]
+      "js": ["src/extension/content.js"]
     }
   ],
-  "web_accessible_resources": []
+  "web_accessible_resources": [
+    "src/main.js",
+    "src/dom.js"
+  ]
 }

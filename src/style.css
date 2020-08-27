@@ -1,0 +1,18 @@
+
+.pelt-suggest {
+
+}
+
+.pelt-suggest .pelt-suggest-list {
+  list-style: none;
+  display: flex;
+  margin: 0 16px;
+
+}
+
+.pelt-suggest .pelt-suggest-list li {
+  margin-right: 4px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0095ff;
+}
