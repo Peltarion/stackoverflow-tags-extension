@@ -15,8 +15,14 @@
       "js": ["src/extension/content.js"]
     }
   ],
+  "page_action": {
+    "default_popup": "src/extension/popup.html"
+  },
+  "permissions": ["declarativeContent", "storage"],
   "web_accessible_resources": [
     "src/main.js",
-    "src/dom.js"
+    "src/dom.js",
+    "src/api.js",
+    "src/utils.js"
   ]
 }
