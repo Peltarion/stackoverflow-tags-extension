@@ -16,3 +16,8 @@
   text-decoration: underline;
   color: #0095ff;
 }
+
+.pelt-suggest-btn[disabled] {
+  color: #fff!important;
+  background-color: #bbc0c4!important;
+}
