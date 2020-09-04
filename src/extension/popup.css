@@ -1,0 +1,141 @@
+:root {
+
+  --color-dark-1: #0C191C;
+  --color-dark-2: #111F27;
+
+  --color-green-65: #00A796;
+  --color-green-75: #009086;
+  --color-green-5: #E0F4F2;
+
+  --color-grey-25: #C3CAD0;
+
+  --color-dirty-white: #FDFDFD;
+  --color-pure-white: #FFFFFF;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  width: 290px;
+  border-radius: 4px;
+  background: var(--color-dark-2);
+}
+
+h1 {
+  color: var(--color-pure-white);
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 16px;
+}
+
+a {
+  color: var(--color-pure-white);
+  display: block;
+  margin-bottom: 8px;
+}
+
+header {
+  background-color: var(--color-dark-1);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  min-height: 32px;
+}
+
+section {
+  padding: 16px 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid var(--color-dirty-white);
+  margin-bottom: 16px;
+}
+
+.field__input {
+  color: var(--color-dirty-white);
+  background: transparent;
+  border: none;
+  padding: 0 24px 0 8px;
+
+  width: 100%;
+  height: 40px;
+}
+
+.field__input::placeholder {
+  color: var(--color-grey-25);
+}
+
+.field__input:focus {
+  outline: 0;
+}
+
+.field__input:focus::placeholder {
+  color: rgba(0,0,0,0)
+}
+
+.field__label {
+  color: var(--color-dirty-white);
+  font-size: 12px;
+  display: block;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  padding: 0 24px 0 8px;
+  opacity: 0;
+  max-height: 0;
+}
+
+.field__input:not(:placeholder-shown) + .field__label,
+.field__input:focus + .field__label {
+  opacity: 1;
+  max-height: initial;
+}
+
+.actions {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.actions .btn {
+  margin-right: 16px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+
+  border-radius: 4px;
+
+  height: 40px;
+  padding: 11px 16px;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-green-65);
+  color: var(--color-dirty-white);
+}
+
+.btn-secondary {
+  background: var(--color-green-5);
+  color: var(--color-green-75);
+}

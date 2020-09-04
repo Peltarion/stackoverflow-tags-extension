@@ -1,21 +1,39 @@
   <!DOCTYPE html>
   <html>
     <head>
-      <style>
-      </style>
+      <link rel="stylesheet" type="text/css" href="popup.css">
     </head>
     <body>
-      <label>deployment url</label>
-      <input type="text" name="url" />
+      <header>
+        <img src="../../assets/icon_16x16.png" />
+      </header>
 
-      <label>token</label>
-      <input type="text" name="token" />
+      <section>
+        <h1>Atomatically tag your Stack Overflow text with Peltarions AI</h1>
 
-      <label>input param</label>
-      <input type="text" name="param" />
+        <div class="field">
+          <input class="field__input" type="text" name="url" placeholder="Deployment url" autocomplete="off" />
+          <label class="field__label" >Deployment url</label>
+        </div>
 
-      <button class="save-btn">Save</button>
-      <button class="reset-btn">Reset</button>
+        <div class="field">
+          <input class="field__input" type="text" name="token" placeholder="Token" autocomplete="off" />
+          <label class="field__label" >Token</label>
+        </div>
+
+        <div class="field">
+          <input class="field__input" type="text" name="param" placeholder="Input param" autocomplete="off" />
+          <label class="field__label" >Input param</label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary save-btn">Save</button>
+          <button class="btn btn-secondary reset-btn">Reset</button>
+        </div>
+
+        <a href="#">Read more about this plug-in</a>
+        <a href="https://peltarion.com/">Peltarion.com</a>
+      </section>
 
       <script src="popup.js"></script>
     </body>

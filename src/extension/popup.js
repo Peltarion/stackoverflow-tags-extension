@@ -35,9 +35,9 @@ saveButton.addEventListener('click', (ev) => {
     token: deploymentTokenInput.value,
     inputParam: deploymentParamInput.value
   }});
-})
+});
 
 resetButton.addEventListener('click', (ev) => {
   ev.preventDefault();
   messagePort.postMessage({ type: 'RESET-DEPLOYMENT' });
-})
+});
