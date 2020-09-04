@@ -42,6 +42,8 @@ export const run = () => {
     ev.preventDefault();
     ev.stopImmediatePropagation();
 
+    suggestButton.disabled = true;
+
     removeChildren(suggestTagList);
 
     const title = postTitleInputElem.value;
@@ -62,6 +64,7 @@ export const run = () => {
           });
 
         addChildren(suggestTagList, tagsAsListItems);
+        suggestButton.disabled = false;
       });
   }
 
